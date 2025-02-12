@@ -1,0 +1,19 @@
+.stVerticalBlock.st-emotion-cache-1lvq374.e6rk8up3{
+    padding: 1rem;
+    border-radius:1rem;
+    background-color: brown;
+}
+
+.diagnosis{
+    color: aliceblue;
+    padding: 0.2em;
+    border-radius: 0.5em;
+}
+
+.diagnosis.be{
+    background-color: green;
+}
+.diagnosis.ma{
+    background-color: red;
+}
+
