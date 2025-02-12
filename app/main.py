@@ -1,17 +1,19 @@
 import streamlit as st
+st.set_page_config(
+page_title = "Breast Canser Predictor",
+page_icon = ":female_doctor:",
+layout="wide",
+initial_sidebar_state = "expanded"
+)
+    
 import pickle as pickle
 import pandas as pd
 import plotly.graph_objects as go
 import numpy as np
 
 def main():
-    st.set_page_config(
-    page_title = "Breast Canser Predictor",
-    page_icon = ":female_doctor:",
-    layout="wide",
-    initial_sidebar_state = "expanded"
-)
-   
+    st.title("")
+  
 def get_clean_data():
     data = pd.read_csv("data/data.csv")
     data = data.drop(['Unnamed: 32', 'id'], axis=1)
@@ -177,7 +179,7 @@ input_data = add_sidebar()
 
 with st.container():
     st.title("Breast Cancer Predictor")
-    st.write("Please connect this app to ypur ")
+    st.write("This AI-powered web application is designed to predict breast cancer outcomes, classifying tumors as either Benign or Malignant based on user-provided medical data. Built with machine learning, the model analyzes key diagnostic features and provides a reliable prediction to assist in early detection and decision-making.")
 
 col1, col2 = st.columns([4, 1])
 
