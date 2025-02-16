@@ -1,5 +1,6 @@
 
 import pandas as pd
+import numpy as np
 from sklearn.preprocessing import StandardScaler # 12 100 43 0-1
 from sklearn.model_selection import train_test_split 
 from sklearn.linear_model import LogisticRegression
@@ -19,7 +20,7 @@ def create_model(data):
     model.fit(x_train, y_train)
 
     y_hat = model.predict(x_test)
-    print("Accuracy: ", accuracy_score(y_hat, y_test))
+    print("Accuracy: ", np.round(100*accuracy_score(y_hat, y_test),2),)
     #print("Report: ", classification_report(y_hat, y_test))
     return model, scaler
 

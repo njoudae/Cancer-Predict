@@ -17,3 +17,24 @@
     background-color: red;
 }
 
+.green{
+    padding: 0.2em 0.4em;
+    overflow-wrap: break-word;
+    margin: 0px;
+    border-radius: 0.25rem;
+    background: rgb(248, 249, 251);
+    color:  rgb(9, 171, 59);
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.75em;
+}
+
+.red{
+    padding: 0.2em 0.4em;
+    overflow-wrap: break-word;
+    margin: 0px;
+    border-radius: 0.25rem;
+    background: rgb(248, 249, 251);
+    color: rgb(9, 171, 59);
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.75em;
+}
