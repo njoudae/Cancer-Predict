@@ -163,7 +163,10 @@ def add_predictions(input_data):
     input_array_scaled = scaler.transform(input_array)
     prediction = model.predict(input_array_scaled) # 0=b | 1=m
 
-    st.write("<b>Cell Cluster Prediction: </b>")
+
+    st.subheader("Cell Cluster Prediction: ")
+
+       # "<b>Cell Cluster Prediction: </b>", unsafe_allow_html=True)
     if prediction[0] == 0:
         st.write("<span class='diagnosis be'>Benign</span>", unsafe_allow_html=True)
     else:
