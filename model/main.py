@@ -1,9 +1,9 @@
 
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler # 12 100 43 0-1
+from sklearn.model_selection import train_test_split 
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score
 import pickle as pickle
 
 def create_model(data):
@@ -20,7 +20,7 @@ def create_model(data):
 
     y_hat = model.predict(x_test)
     print("Accuracy: ", accuracy_score(y_hat, y_test))
-    print("Report: ", classification_report(y_hat, y_test))
+    #print("Report: ", classification_report(y_hat, y_test))
     return model, scaler
 
 def get_clean_data():

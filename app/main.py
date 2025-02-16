@@ -1,9 +1,9 @@
 import streamlit as st
 st.set_page_config(
 page_title = "Breast Canser Predictor",
-page_icon = ":female_doctor:",
+page_icon = ":ribbon:",
 layout="wide",
-initial_sidebar_state = "expanded"
+initial_sidebar_state = "auto"
 )
     
 import pickle as pickle
@@ -25,16 +25,16 @@ def add_sidebar():
     st.sidebar.header("Cell Nuclei Measurements")
     data = get_clean_data()
     sider_labels = [
-        ("Radius", "radius_mean"),
-        ("Texture", "texture_mean"),
-        ("Perimeter", "perimeter_mean"),
-        ("Area", "area_mean"),
-        ("Smoothness", "smoothness_mean"),
-        ("Compactness", "compactness_mean"),
-        ("Concavity", "concavity_mean"),
-        ("Concave Points", "concave points_mean"),
-        ("Symmetry", "symmetry_mean"),
-        ("Fractal Dimension", "fractal_dimension_mean"),
+        ("Radius Mean", "radius_mean"),
+        ("Texture Mean", "texture_mean"),
+        ("Perimeter Mean", "perimeter_mean"),
+        ("Area Mean", "area_mean"),
+        ("Smoothness Mean", "smoothness_mean"),
+        ("Compactness Mean", "compactness_mean"),
+        ("Concavity Mean", "concavity_mean"),
+        ("Concave Points Mean", "concave points_mean"),
+        ("Symmetry Mean", "symmetry_mean"),
+        ("Fractal Dimension Mean", "fractal_dimension_mean"),
         ("Radius SE", "radius_se"),
         ("Texture SE", "texture_se"),
         ("Perimeter SE", "perimeter_se"),
@@ -157,11 +157,11 @@ def load_css():
 load_css()
 
 def add_predictions(input_data):
-    model = pickle.load(open("model\model.pkl", "rb")) #model\model.pkl
-    scaler = pickle.load(open("model\scaler.pkl", "rb"))
+    model = pickle.load(open("model/model.pkl", "rb")) #model\model.pkl
+    scaler = pickle.load(open("model/scaler.pkl", "rb"))
     input_array = np.array(list(input_data.values())).reshape(1, -1)
     input_array_scaled = scaler.transform(input_array)
-    prediction = model.predict(input_array_scaled)
+    prediction = model.predict(input_array_scaled) # 0=b | 1=m
 
     st.subheader("Cell Cluster Prediction: ")
     if prediction[0] == 0:
