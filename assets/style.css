@@ -1,35 +1,25 @@
-.stColumn.st-emotion-cache-7i1wy.e6rk8up2{
+.stColumn.st-emotion-cache-7i1wy.e6rk8up2 {
     border-radius: 0.5rem;
     padding: 1rem;
-    background-color:rgb(248, 249, 251);
+    background-color: rgb(248, 249, 251);
 }
 
-.diagnosis{
+.diagnosis {
     color: aliceblue;
     padding: 0.2em;
     border-radius: 0.5em;
 }
 
-.diagnosis.be{
+.diagnosis.be {
     background-color: green;
 }
-.diagnosis.ma{
+
+.diagnosis.ma {
     background-color: red;
 }
 
-.green{
-    padding: 0.2em 0.4em;
-    overflow-wrap: break-word;
-    margin: 0px;
-    border-radius: 0.25rem;
-    background: rgb(248, 249, 251);
-    color:  rgb(9, 171, 59);
-    font-family: "Source Code Pro", monospace;
-    font-size: 0.75em;
-}
+.percentage {
 
-.red{
-    padding: 0.2em 0.4em;
     overflow-wrap: break-word;
     margin: 0px;
     border-radius: 0.25rem;
@@ -37,4 +27,8 @@
     color: rgb(9, 171, 59);
     font-family: "Source Code Pro", monospace;
     font-size: 0.75em;
+}
+
+.red ~ .st-emotion-cache-15fru4.e1xskjyh0, .red ~ span.percentage {
+    color: red !important;
 }

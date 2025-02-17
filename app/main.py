@@ -172,8 +172,8 @@ def add_predictions(input_data):
     else:
         st.write("<span class='diagnosis ma'>Malicious</span>", unsafe_allow_html=True)
 
-    st.write("Probability of beign <b>Benign</b>: ","\n", np.round(100*model.predict_proba(input_array_scaled)[0][0],2),"<span class='green'>%</span>", unsafe_allow_html=True)
-    st.write("Probability of beign <b>Malicious</b>: ","\n", np.round(100*model.predict_proba(input_array_scaled)[0][1],2),"<span class='red'>%</span>", unsafe_allow_html=True)
+    st.write("Probability of beign <b>Benign</b>: ","\n", np.round(100*model.predict_proba(input_array_scaled)[0][0],2),"<span class='percentage'>%</span>", unsafe_allow_html=True)
+    st.write("<span class='red'>Probability of beign <b>Malicious</b></span>: ","\n", np.round(100*model.predict_proba(input_array_scaled)[0][1],2),"<span class='percentage'>%</span>", unsafe_allow_html=True)
 
 
 
