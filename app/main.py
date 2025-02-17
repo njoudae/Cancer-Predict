@@ -69,7 +69,7 @@ def add_sidebar():
 def get_radar_chart(input_data):
     input_data = get_scaled_values(input_data)
 
-    categories = ["Radius", "radius_mean", "Texture",
+    categories = ["Radius", "Texture",
                   "Perimeter", "Area", "Smoothness",
                   "Compactness", "Concavity", "Concave Points",
                   "Symmetry", "Fractal Dimension"]
