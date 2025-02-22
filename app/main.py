@@ -62,7 +62,7 @@ def add_sidebar():
             label,
             min_value=float(0),
             max_value=float(data[key].max()),
-            value = float(data[key].mean())
+            value = float(0)
     )
     return input_dict
 
@@ -164,7 +164,7 @@ def add_predictions(input_data):
     prediction = model.predict(input_array_scaled) # 0=b | 1=m
 
 
-    st.subheader("Cell Cluster Prediction: ")
+    st.subheader("Cell Diagnose: ")
 
        # "<b>Cell Cluster Prediction: </b>", unsafe_allow_html=True)
     if prediction[0] == 0:
@@ -182,7 +182,8 @@ input_data = add_sidebar()
 
 with st.container():
     st.title("Breast Cancer Predictor")
-    st.write("This AI-powered web application is designed to predict breast cancer outcomes, classifying tumors as either Benign or Malignant based on user-provided medical data. Built with machine learning, the model analyzes key diagnostic features and provides a reliable prediction to assist in early detection and decision-making.")
+    st.write("This AI-powered web application designed to <b>diagnose breast cancer</b> outcomes, classifying tumors as either Benign or Malignant based on user-provided medical data. Built using machine learning techniques, the model analyzes key diagnostic features and provides reliable predictions to assist in early detection and decision-making.",unsafe_allow_html=True)
+
 
 col1, col2 = st.columns([4, 1])
 
