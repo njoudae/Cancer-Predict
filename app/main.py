@@ -1,6 +1,6 @@
 import streamlit as st
 st.set_page_config(
-page_title = "Breast Canser Predictor",
+page_title = "Breast Canser (Diagnostic)",
 page_icon = ":ribbon:",
 layout="wide",
 initial_sidebar_state = "auto"
@@ -181,7 +181,7 @@ input_data = add_sidebar()
 #st.write(input_data)
 
 with st.container():
-    st.title("Breast Cancer Predictor")
+    st.title("Breast Cancer Diagnose")
     st.write("This AI-powered web application designed to <b>diagnose breast cancer</b> outcomes, classifying tumors as either Benign or Malignant based on user-provided medical data. Built using machine learning techniques, the model analyzes key diagnostic features and provides reliable predictions to assist in early detection and decision-making.",unsafe_allow_html=True)
 
 
